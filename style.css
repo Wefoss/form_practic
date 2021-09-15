@@ -1,0 +1,109 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0px;
+  font-size: 1.2rem;
+  color: rgb(114, 109, 109);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: inherit;
+    outline: none;
+    font-size: 1rem;
+}
+input:focus {
+    border: 2px solid orange;
+}
+
+.main-wrapper {
+  background-color: lightpink;
+  min-height: 100vh;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.main {
+  max-width: 450px;
+  min-height: 75vh;
+  margin: auto;
+  background-color: lightseagreen;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  
+  }
+
+.title {
+  font-size: 2em;
+  padding: 0 5px;
+  font-weight: 300;
+}
+
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  border: 1px solid rgb(114, 109, 109);
+  width: 100%;
+}
+
+.acc-info {
+  text-align: center;
+  padding: 10px 0px 30px;
+}
+
+.full-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.full-name input {
+ width: 45%;
+}
+
+.rest-inputs {
+    display: flex;
+    flex-direction: column;
+}
+.rest-inputs input:first-child {
+    margin-top: 30px;
+}
+.btn {
+    background-color: lightgreen;
+    border-color: lightgreen;
+    color: inherit;
+}
+
+.rest-inputs input {
+  margin: 15px 0px;
+}
+.footer-info {
+    text-align: center;
+    margin: 10px;
+}
+.checkbox-box a {
+    text-decoration: none;
+    color: rgb(247, 196, 28);
+}
+
+.footer-info a {
+   color: rgb(114, 109, 109);
+
+}
