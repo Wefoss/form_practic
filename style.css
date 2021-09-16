@@ -15,16 +15,26 @@ p {
   padding: 0;
 }
 
-
 input {
-    padding: 10px;
-    border-radius: 5px;
-    border-color: inherit;
-    outline: none;
-    font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: inherit;
+  outline: none;
+  font-size: 1rem;
 }
 input:focus {
-    border: 2px solid orange;
+  border: 2px solid orange;
+}
+
+a:not(p > a) {
+  text-decoration: none;
+  color: rgb(247, 196, 28);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-wrapper {
@@ -32,34 +42,53 @@ input:focus {
   min-height: 100vh;
   padding-top: 50px;
   width: 100%;
+  z-index: -2;
 }
 
 .main {
   max-width: 450px;
+  min-width: 300px;
+  width: 100%;
   min-height: 75vh;
   margin: auto;
   background-color: lightseagreen;
   padding: 25px;
   border-radius: 5px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-  
-  }
+  z-index: -2;
+}
 
 .title {
   font-size: 2em;
   padding: 0 5px;
   font-weight: 300;
-}
-
-.title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.line {
-  border: 1px solid rgb(114, 109, 109);
+  position: relative;
+  text-align: center;
   width: 100%;
+  display: inline-block;
+  z-index: 5;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(114, 109, 109);
+  right: 0;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+.title-span {
+  padding: 0 10px;
+  max-width: 200px;
+  background-color: lightseagreen;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  margin: 0 auto;
 }
 
 .acc-info {
@@ -68,42 +97,34 @@ input:focus {
 }
 
 .full-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
 .full-name input {
- width: 45%;
+  width: 45%;
 }
 
 .rest-inputs {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .rest-inputs input:first-child {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 .btn {
-    background-color: lightgreen;
-    border-color: lightgreen;
-    color: inherit;
+  background-color: lightgreen;
+  border-color: lightgreen;
+  color: inherit;
 }
 
 .rest-inputs input {
   margin: 15px 0px;
 }
 .footer-info {
-    text-align: center;
-    margin: 10px;
-}
-.checkbox-box a {
-    text-decoration: none;
-    color: rgb(247, 196, 28);
+  text-align: center;
+  margin: 10px;
 }
 
 .footer-info a {
-   color: rgb(114, 109, 109);
-
+  color: rgb(114, 109, 109);
 }

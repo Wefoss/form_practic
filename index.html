@@ -10,45 +10,70 @@
   <body>
     <section class="main-wrapper">
       <section class="main">
-        <div class="title-wrap">
-          <p class="line"></p>
-          <h1 class="title">Register</h1>
-          <p class="line"></p>
-        </div>
+        <h1 class="title hidden">
+          <span class="title-span">Registertegrrte</span>
+        </h1>
         <p class="acc-info">
           Create your account. It`s free and takes a minuts
         </p>
         <form action="">
-          <div class="full-name">
-            <input type="text" name="first-name" placeholder="First Name" autofocus/>
-            <input type="text" name="last-name" placeholder="Last Name" />
+          <div class="full-name flex">
+            <input
+              type="text"
+              name="first-name"
+              placeholder="First Name"
+              autofocus
+              required
+            />
+            <input
+              type="text"
+              name="last-name"
+              placeholder="Last Name"
+              required
+            />
           </div>
           <div class="rest-inputs">
-            <input type="email" name="email" id="" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Email"
+              required
+            />
             <input
               type="password"
               name="password"
               id=""
               placeholder="Password"
+              required
             />
             <input
               type="password"
               name="password"
               id=""
               placeholder="Confirm Password"
+              required
             />
             <div class="checkbox-box">
-              <input type="checkbox" name="accept" value="aggre" />
-              <span>I accept the
-                <a href="#">Terms of Use</a> &
+              <input
+                type="checkbox"
+                name="accept"
+                value="aggre"
+                id="accept"
+                required
+              />
+              <label for="accept">
+                I accept the <a href="#">Terms of Use</a> &
                 <a href="#">Privacy Policy</a>
-              </span>
+              </label>
             </div>
             <input class="btn" type="submit" value="Register Now" />
           </div>
         </form>
       </section>
-      <p class="footer-info">Already have an account? <a href="#">Sing in</a></p>
+      <p class="footer-info">
+        Already have an account? <a href="#">Sing in</a>
+      </p>
     </section>
   </body>
 </html>
