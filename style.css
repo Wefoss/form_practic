@@ -1,13 +1,20 @@
+:root {
+  --bg-color:  rgb(238, 234, 234);
+  --link-color: rgb(72, 170, 63);
+  --color-white: #fff;
+  --text-color: rgb(160, 157, 157);
+  --box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.2);
+}
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0px;
   font-size: 1.2rem;
-  color: rgb(114, 109, 109);
+  color: var(--text-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 * {
   box-sizing: border-box;
-}
+  }
 
 h1,
 p {
@@ -15,21 +22,25 @@ p {
   padding: 0;
 }
 
+
 input {
   padding: 10px;
   border-radius: 5px;
   border-color: inherit;
   outline: none;
   font-size: 1rem;
+  border: 1px solid var(--text-color); 
+  transition: border 0.2s ease;
 }
-input:focus {
-  border: 2px solid orange;
+form input:focus:not(.btn) {
+    border: 1px solid orange;
 }
 
 a:not(p > a) {
   text-decoration: none;
-  color: rgb(247, 196, 28);
+  color: var(--link-color);
 }
+
 
 .flex {
   display: flex;
@@ -37,12 +48,12 @@ a:not(p > a) {
   align-items: center;
 }
 
-.main-wrapper {
-  background-color: lightpink;
+.main-wrapper { 
   min-height: 100vh;
   padding-top: 50px;
   width: 100%;
   z-index: -2;
+  background-color: rgb(123, 142, 172);
 }
 
 .main {
@@ -50,46 +61,45 @@ a:not(p > a) {
   min-width: 300px;
   width: 100%;
   min-height: 75vh;
-  margin: auto;
-  background-color: lightseagreen;
   padding: 25px;
-  border-radius: 5px;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-  z-index: -2;
-}
+  border-radius: 5px;  
+  margin: auto;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+ }
 
 .title {
   font-size: 2em;
-  padding: 0 5px;
   font-weight: 300;
+  width: 100%;
   position: relative;
   text-align: center;
-  width: 100%;
   display: inline-block;
   z-index: 5;
+  color: rgb(83, 78, 78);
 }
 .title::after {
   content: "";
-  position: absolute;
   height: 2px;
   width: 100%;
-  background-color: rgb(114, 109, 109);
   right: 0;
   left: 0;
   top: 50%;
   z-index: -1;
+  position: absolute;
+  background-color: var(--text-color);
 }
 
 .title-span {
   padding: 0 10px;
   max-width: 200px;
-  background-color: lightseagreen;
+  margin: 0 auto;
+  background-color: var(--bg-color);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  margin: 0 auto;
-}
+  }
 
 .acc-info {
   text-align: center;
@@ -112,9 +122,18 @@ a:not(p > a) {
   margin-top: 30px;
 }
 .btn {
-  background-color: lightgreen;
-  border-color: lightgreen;
-  color: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  background-color: var(--link-color);
+   color: var(--color-white);
+   border: none;
+   }
+
+.btn:active {
+ box-shadow: none;
 }
 
 .rest-inputs input {
@@ -125,6 +144,7 @@ a:not(p > a) {
   margin: 10px;
 }
 
-.footer-info a {
-  color: rgb(114, 109, 109);
+.footer-info a, .footer-info  {
+  color: var(--color-white);
 }
+
